@@ -22,7 +22,7 @@ interface PostContextProps {
 export const PostsContext = createContext({} as PostContextProps)
 
 export function PostsContextProvider({ children }: PostsContextProvideProps) {
-  const [user, setUser] = useState<UserProps>({})
+  const [user, setUser] = useState<UserProps>({} as UserProps)
 
   async function loadUser() {
     const response = await api.get('/users/lobo4321')
@@ -33,8 +33,6 @@ export function PostsContextProvider({ children }: PostsContextProvideProps) {
   useEffect(() => {
     loadUser()
   }, [])
-
-  console.log(user)
 
   return (
     <PostsContext.Provider value={{ user }}>{children}</PostsContext.Provider>

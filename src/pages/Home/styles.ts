@@ -12,4 +12,6 @@ export const PostsContainer = styled.section`
   gap: 2rem;
 
   margin-top: 3rem;
+
+  margin-bottom: 14.625rem;
 `
