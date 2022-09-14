@@ -8,10 +8,10 @@ import {
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '../../../../components/Link'
-import { useUser } from '../../../../hooks/useUser'
+import { usePosts } from '../../../../hooks/usePosts'
 
 export function ProfileCard() {
-  const { user } = useUser()
+  const { user } = usePosts()
 
   return (
     <S.ProfileCardContainer>
